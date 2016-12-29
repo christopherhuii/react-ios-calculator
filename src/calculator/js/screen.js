@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 import './../css/screen.css';
 
 const Screen = (props) => {
@@ -11,6 +11,9 @@ const Screen = (props) => {
   );
 }
 
+Screen.propTypes = {
+  value: PropTypes.string
+}
 
 
 export default Screen;
