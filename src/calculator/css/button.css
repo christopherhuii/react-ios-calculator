@@ -1,10 +1,12 @@
 .calc-base-btn {
   width: 25%;
   height: 75px;
+  position: relative;
   border: none;
+  box-sizing: border-box;
   border-bottom: 1px solid #000;
   border-right: 1px solid #000;
-  box-sizing: border-box;
+  outline: none;
   font-size: 1.75em;
   font-weight: 100;
 }
@@ -12,7 +14,6 @@
 .calc-base-btn:first-of-type {
   border-left: 1px solid #000;
 }
-
 
 .misc-btn {
   background-color: #dbddde;
@@ -32,17 +33,17 @@
   background-color: #f7f7f7;
 }
 
-/*
-  #ff9500
-  #ff5e3a
-*/
+.misc-btn:after, .math-operation-btn:after, .num-btn:after, .num-btn--zero:after {
+  position:absolute;
+  content:'\A';
+  width:100%; 
+  height:100%;
+  top:0; 
+  left:0;
+  background:rgba(0,0,0,0.10);
+  opacity:0;
+}
 
-/*
-  #dbddde
-  #898c90
-*/
-
-/* 
-  #f7f7f7
-   #d7d7d7
-*/
+.misc-btn:active:after, .math-operation-btn:active:after, .num-btn:active:after, .num-btn--zero:active:after {
+  opacity: 1;
+}
