@@ -24,6 +24,10 @@
   color: #fff;
 }
 
+.math-operation-btn.active-operator {
+  border: 2px solid #000;
+}
+
 .num-btn {
   background-color: #f7f7f7;
 }

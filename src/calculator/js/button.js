@@ -3,7 +3,7 @@ import './../css/button.css';
 
 const Button = (props) => {
   return (
-    <button className={["calc-base-btn", props.className].join(" ")} onClick={props.handleClick}>
+    <button className={["calc-base-btn", props.className].join(" ")} onClick={props.onBtnClick}>
       {props.displayValue}
     </button>
   );
@@ -11,7 +11,7 @@ const Button = (props) => {
 
 Button.propTypes = {
   className: PropTypes.string,
-  handleClick: PropTypes.func
+  onBtnClick: PropTypes.func
 }
 
 export default Button;
